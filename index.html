@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.css" />
@@ -107,32 +107,50 @@
             <h2 id="servicos-title">O que atendemos</h2>
           </header>
 
-          <ul class="services-grid">
+          <ol class="services-list">
             <li class="reveal">
-              <h3>Abertura e regularização</h3>
-              <p>Abertura de CNPJ, alterações contratuais e regularização de pendências junto aos órgãos competentes.</p>
+              <span class="services-index" aria-hidden="true">01</span>
+              <div>
+                <h3>Abertura e regularização</h3>
+                <p>Abertura de CNPJ, alterações contratuais e regularização de pendências junto aos órgãos competentes.</p>
+              </div>
             </li>
             <li class="reveal reveal-delay-1">
-              <h3>Contabilidade para MEI e ME</h3>
-              <p>Acompanhamento das obrigações mensais, DAS e suporte na rotina do microempreendedor.</p>
+              <span class="services-index" aria-hidden="true">02</span>
+              <div>
+                <h3>Contabilidade para MEI e ME</h3>
+                <p>Acompanhamento das obrigações mensais, DAS e suporte na rotina do microempreendedor.</p>
+              </div>
             </li>
             <li class="reveal reveal-delay-2">
-              <h3>Contabilidade empresarial</h3>
-              <p>Escrituração, apuração de impostos e relatórios para o acompanhamento da empresa.</p>
+              <span class="services-index" aria-hidden="true">03</span>
+              <div>
+                <h3>Contabilidade empresarial</h3>
+                <p>Escrituração, apuração de impostos e relatórios para o acompanhamento da empresa.</p>
+              </div>
             </li>
             <li class="reveal">
-              <h3>Planejamento tributário</h3>
-              <p>Análise do regime tributário mais adequado ao porte e à atividade do negócio.</p>
+              <span class="services-index" aria-hidden="true">04</span>
+              <div>
+                <h3>Planejamento tributário</h3>
+                <p>Análise do regime tributário mais adequado ao porte e à atividade do negócio.</p>
+              </div>
             </li>
             <li class="reveal reveal-delay-1">
-              <h3>Imposto de Renda PF/PJ</h3>
-              <p>Elaboração e revisão da declaração com base na documentação apresentada.</p>
+              <span class="services-index" aria-hidden="true">05</span>
+              <div>
+                <h3>Imposto de Renda PF/PJ</h3>
+                <p>Elaboração e revisão da declaração com base na documentação apresentada.</p>
+              </div>
             </li>
             <li class="reveal reveal-delay-2">
-              <h3>Folha de pagamento</h3>
-              <p>Cálculo de folha, encargos e entrega das obrigações acessórias nos prazos legais.</p>
+              <span class="services-index" aria-hidden="true">06</span>
+              <div>
+                <h3>Folha de pagamento</h3>
+                <p>Cálculo de folha, encargos e entrega das obrigações acessórias nos prazos legais.</p>
+              </div>
             </li>
-          </ul>
+          </ol>
 
           <div class="services-cta reveal">
             <a
@@ -153,7 +171,7 @@
         id="imposto-de-renda"
         aria-labelledby="ir-title"
       >
-        <div class="container ir-layout">
+        <div class="container">
           <div class="ir-intro reveal">
             <p class="eyebrow">Imposto de Renda</p>
             <h2 id="ir-title">Declaração de Imposto de Renda</h2>
@@ -240,8 +258,19 @@
 
       <section class="section about" id="sobre" aria-labelledby="sobre-title">
         <div class="container about-layout">
+          <figure class="media-slot reveal">
+            <img
+              class="media-slot-img"
+              src="/src/assets/sobre.jpg"
+              alt="Escritório da Piramide RS"
+              width="720"
+              height="960"
+              loading="lazy"
+            />
+          </figure>
+
           <div class="about-copy">
-            <div class="about-prose reveal">
+            <div class="about-prose reveal reveal-delay-1">
               <p class="eyebrow">Sobre</p>
               <h2 id="sobre-title">
                 Escritório de contabilidade em Porto Alegre
@@ -261,24 +290,15 @@
               </p>
             </div>
           </div>
-
-          <figure class="media-slot reveal reveal-delay-1">
-            <img
-              class="media-slot-img"
-              src="/src/assets/sobre.jpg"
-              alt="Escritório da Piramide RS"
-              width="720"
-              height="960"
-              loading="lazy"
-            />
-          </figure>
         </div>
       </section>
 
       <section class="cta-band" aria-labelledby="cta-title">
         <div class="container cta-inner reveal">
-          <h2 id="cta-title">Precisa de um contador?</h2>
-          <p>Fale conosco pelo WhatsApp e conte o que sua empresa precisa.</p>
+          <div class="cta-copy">
+            <h2 id="cta-title">Precisa de um contador?</h2>
+            <p>Fale conosco pelo WhatsApp e conte o que sua empresa precisa.</p>
+          </div>
           <a
             class="btn btn-primary"
             href="https://wa.me/5500000000000"
