@@ -320,17 +320,15 @@ ol {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-color: #1a2432;
-  overflow: hidden;
-}
-
-.hero-bg::before {
-  content: "";
-  position: absolute;
-  inset: -4%;
-  background: url("./assets/faq.jpg") 58% 32% / cover no-repeat;
-  filter: blur(2px) saturate(1.05);
-  transform: scale(1.06);
+  background:
+    linear-gradient(
+      165deg,
+      rgba(26, 36, 50, 0.88) 0%,
+      rgba(47, 63, 84, 0.72) 48%,
+      rgba(74, 109, 140, 0.5) 100%
+    ),
+    url("./assets/faq.jpg") center / cover no-repeat;
+  transform: scale(1.03);
   animation: hero-drift 20s var(--ease) infinite alternate;
 }
 
@@ -338,13 +336,7 @@ ol {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    165deg,
-    rgba(26, 36, 50, 0.92) 0%,
-    rgba(47, 63, 84, 0.82) 42%,
-    rgba(47, 63, 84, 0.58) 68%,
-    rgba(74, 109, 140, 0.4) 100%
-  );
+  background: linear-gradient(180deg, transparent 40%, rgba(26, 36, 50, 0.35) 100%);
   pointer-events: none;
 }
 
@@ -396,11 +388,11 @@ ol {
 
 @keyframes hero-drift {
   from {
-    transform: scale(1.06) translate3d(0, 0, 0);
+    transform: scale(1.03) translate3d(0, 0, 0);
   }
 
   to {
-    transform: scale(1.1) translate3d(-1%, -0.6%, 0);
+    transform: scale(1.07) translate3d(-1%, -0.6%, 0);
   }
 }
 
@@ -860,7 +852,7 @@ ol {
     transform: none;
   }
 
-  .hero-bg::before {
+  .hero-bg {
     animation: none;
   }
 }
@@ -988,35 +980,11 @@ ol {
 
 @media (min-width: 1800px) {
   :root {
-    --container: 100rem;
+    --container: 92rem;
   }
 
   .container {
     width: min(100% - 4rem, var(--container));
-  }
-
-  .hero {
-    min-height: min(72svh, 46rem);
-    align-items: flex-end;
-  }
-
-  .hero-content {
-    max-width: min(52rem, 40vw);
-    padding: 0 0 clamp(2.75rem, 6vh, 4.5rem);
-  }
-
-  .hero-brand {
-    font-size: clamp(2.5rem, 2.8vw, 3.6rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(2.6rem, 3vw, 3.9rem);
-    max-width: 15ch;
-  }
-
-  .hero-lead {
-    font-size: 1.3rem;
-    max-width: 40rem;
   }
 
   .about-layout .media-slot {
@@ -1030,38 +998,6 @@ ol {
   .contact-map,
   .contact-map iframe {
     min-height: 34rem;
-  }
-}
-
-@media (min-width: 2400px) {
-  :root {
-    --container: 118rem;
-  }
-
-  .hero {
-    min-height: min(64svh, 42rem);
-  }
-
-  .hero-content {
-    max-width: min(58rem, 38vw);
-  }
-
-  .hero-brand {
-    font-size: clamp(3rem, 2.6vw, 4.2rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 2.8vw, 4.4rem);
-  }
-
-  .hero-lead {
-    font-size: 1.4rem;
-  }
-
-  .hero .btn {
-    min-height: 3.35rem;
-    padding-inline: 1.55rem;
-    font-size: 1.05rem;
   }
 }
 
