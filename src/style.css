@@ -314,20 +314,30 @@ ul {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    linear-gradient(
-      105deg,
-      rgba(8, 42, 48, 0.88) 0%,
-      rgba(14, 61, 67, 0.78) 42%,
-      rgba(26, 92, 99, 0.55) 100%
-    ),
-    url("./assets/faq.jpg") center / cover no-repeat;
+  background-color: #0e3d43;
+  overflow: hidden;
 }
 
-.hero-bg::before,
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background: url("./assets/faq.jpg") 58% 32% / cover no-repeat;
+  filter: blur(2px) saturate(1.05);
+  transform: scale(1.06);
+}
+
 .hero-bg::after {
-  content: none;
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(8, 42, 48, 0.92) 0%,
+    rgba(14, 61, 67, 0.84) 36%,
+    rgba(14, 61, 67, 0.62) 62%,
+    rgba(26, 92, 99, 0.42) 100%
+  );
 }
 
 .hero-content {
@@ -942,21 +952,82 @@ ul {
   }
 }
 
-/* Ultrawide: keep the site at a desktop width instead of
-   stretching a thin column across 21:9 / 32:9 monitors. */
-@media (min-width: 1600px) {
-  body {
-    background: #d7e0de;
+@media (min-width: 1800px) {
+  :root {
+    --container: 100rem;
   }
 
-  .site-frame {
-    max-width: 90rem;
-    margin-inline: auto;
-    min-height: 100svh;
-    background: var(--color-paper);
-    box-shadow:
-      0 0 0 1px rgba(15, 42, 50, 0.06),
-      0 28px 80px rgba(15, 42, 50, 0.1);
+  .container {
+    width: min(100% - 4rem, var(--container));
+  }
+
+  .hero {
+    min-height: min(72svh, 46rem);
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    max-width: min(52rem, 40vw);
+    padding: 0 0 clamp(2.75rem, 6vh, 4.5rem);
+  }
+
+  .hero-brand {
+    font-size: clamp(2.5rem, 2.8vw, 3.6rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 3vw, 3.9rem);
+    max-width: 15ch;
+  }
+
+  .hero-lead {
+    font-size: 1.3rem;
+    max-width: 40rem;
+  }
+
+  .about-layout .media-slot {
+    max-height: 36rem;
+  }
+
+  .about-layout .media-slot-img {
+    height: 36rem;
+  }
+
+  .contact-map,
+  .contact-map iframe {
+    min-height: 34rem;
+  }
+}
+
+@media (min-width: 2400px) {
+  :root {
+    --container: 118rem;
+  }
+
+  .hero {
+    min-height: min(64svh, 42rem);
+  }
+
+  .hero-content {
+    max-width: min(58rem, 38vw);
+  }
+
+  .hero-brand {
+    font-size: clamp(3rem, 2.6vw, 4.2rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 2.8vw, 4.4rem);
+  }
+
+  .hero-lead {
+    font-size: 1.4rem;
+  }
+
+  .hero .btn {
+    min-height: 3.35rem;
+    padding-inline: 1.55rem;
+    font-size: 1.05rem;
   }
 }
 
