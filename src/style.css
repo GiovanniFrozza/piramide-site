@@ -597,7 +597,7 @@ ol {
 
 /* About */
 .about {
-  background: var(--color-surface);
+  background: var(--color-paper);
 }
 
 .about-layout {
