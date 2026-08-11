@@ -399,7 +399,7 @@ ul {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: start;
 }
 
 .about-layout .media-slot {
@@ -430,6 +430,10 @@ ul {
 
 .about-prose p:last-child {
   margin-bottom: 0;
+}
+
+.faq-section {
+  background: var(--color-paper-deep);
 }
 
 /* Media slots — troque .media-slot-fill por <img class="media-slot-img"> */
