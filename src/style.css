@@ -601,7 +601,7 @@ ol {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: var(--space-xl);
-  align-items: center;
+  align-items: start;
 }
 
 .about-layout .media-slot {
@@ -635,6 +635,10 @@ ol {
 
 .about-prose p:last-child {
   margin-bottom: 0;
+}
+
+.faq-section {
+  background: var(--color-paper-deep);
 }
 
 .media-slot {
