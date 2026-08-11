@@ -597,7 +597,7 @@ ol {
 
 /* About */
 .about {
-  background: var(--color-paper);
+  background: var(--color-paper-deep);
 }
 
 .about-layout {
@@ -641,7 +641,7 @@ ol {
 }
 
 .faq-section {
-  background: var(--color-paper-deep);
+  background: var(--color-surface);
 }
 
 .media-slot {
