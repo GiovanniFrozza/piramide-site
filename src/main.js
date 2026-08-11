@@ -2,8 +2,6 @@ const header = document.querySelector(".site-header");
 const nav = document.querySelector("#site-nav");
 const toggle = document.querySelector(".nav-toggle");
 const year = document.querySelector("#year");
-const form = document.querySelector("#contact-form");
-const formNote = form?.querySelector(".form-note");
 
 if (year) {
   year.textContent = String(new Date().getFullYear());
@@ -66,28 +64,14 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   reveals.forEach((el) => el.classList.add("is-visible"));
 }
 
-/* Contact form → mailto compose (no backend) */
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
+/* FAQ: abre um item por vez */
+document.querySelectorAll("[data-faq]").forEach((faq) => {
+  faq.addEventListener("toggle", (event) => {
+    const item = event.target;
+    if (!(item instanceof HTMLDetailsElement) || !item.open) return;
 
-  const data = new FormData(form);
-  const nome = String(data.get("nome") || "").trim();
-  const email = String(data.get("email") || "").trim();
-  const telefone = String(data.get("telefone") || "").trim();
-  const assunto = String(data.get("assunto") || "").trim();
-  const mensagem = String(data.get("mensagem") || "").trim();
-
-  const to = "contato@piramiders.com.br";
-  const subject = encodeURIComponent(`Contato site — ${assunto}`);
-  const body = encodeURIComponent(
-    `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nAssunto: ${assunto}\n\n${mensagem}`,
-  );
-
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
-
-  if (formNote) {
-    formNote.hidden = false;
-    formNote.textContent =
-      "Abrindo seu e-mail… Se nada abrir, envie para contato@piramiders.com.br.";
-  }
+    faq.querySelectorAll("details.faq-item").forEach((other) => {
+      if (other !== item) other.open = false;
+    });
+  }, true);
 });
