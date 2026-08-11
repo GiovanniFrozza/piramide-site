@@ -26,7 +26,7 @@
 
   --radius: 2px;
   --shadow-soft: 0 18px 50px rgba(14, 61, 67, 0.12);
-  --header-h: 4.25rem;
+  --header-h: 4.5rem;
   --container: 70rem;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -187,7 +187,7 @@ ul {
   color: #fff;
   min-height: 2.5rem;
   padding: 0.45rem 1rem;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .btn-nav:hover {
@@ -227,8 +227,8 @@ ul {
 }
 
 .brand-logo {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -237,7 +237,7 @@ ul {
   display: flex;
   flex-direction: column;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -245,7 +245,7 @@ ul {
 
 .brand-text em {
   font-style: normal;
-  font-size: 0.72rem;
+  font-size: 0.95rem;
   color: var(--color-teal);
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -260,7 +260,7 @@ ul {
 .site-nav a:not(.btn) {
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.98rem;
+  font-size: 1.2rem;
   color: var(--color-ink-soft);
 }
 
@@ -331,22 +331,6 @@ ul {
   display: none;
 }
 
-.hero-mark {
-  --hero-mark-opacity: 0.16;
-  display: none;
-  position: absolute;
-  right: clamp(-4%, 2vw, 6%);
-  bottom: -8%;
-  width: min(48vw, 34rem);
-  height: auto;
-  opacity: var(--hero-mark-opacity);
-  pointer-events: none;
-  z-index: 0;
-  filter: brightness(1.15) saturate(0.85);
-  transform-origin: 70% 80%;
-  animation: hero-mark-in 1.1s var(--ease) both;
-}
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -376,18 +360,6 @@ ul {
   color: rgba(237, 244, 243, 0.88);
   max-width: 34rem;
   margin-bottom: var(--space-lg);
-}
-
-@keyframes hero-mark-in {
-  from {
-    opacity: 0;
-    transform: scale(0.94) translate3d(2%, 4%, 0);
-  }
-
-  to {
-    opacity: var(--hero-mark-opacity);
-    transform: none;
-  }
 }
 
 .hero-actions {
@@ -869,19 +841,9 @@ ul {
   .btn:hover {
     transform: none;
   }
-
-  .hero-mark {
-    animation: none;
-  }
 }
 
-/* Large monitors */
-@media (min-width: 900px) {
-  .hero-mark {
-    display: block;
-  }
-}
-
+/* Large monitors (1080p / MacBook) — layout only, tipografia base */
 @media (min-width: 1200px) {
   :root {
     --container: 76rem;
@@ -892,23 +854,6 @@ ul {
     width: min(100% - 3rem, var(--container));
   }
 
-  .brand-logo {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
-  .brand-text {
-    font-size: 1.12rem;
-  }
-
-  .site-nav {
-    gap: 1.5rem;
-  }
-
-  .site-nav a:not(.btn) {
-    font-size: 1.05rem;
-  }
-
   .hero-content {
     max-width: 46rem;
   }
@@ -916,11 +861,6 @@ ul {
   .hero-lead {
     max-width: 38rem;
     font-size: 1.25rem;
-  }
-
-  .hero-mark {
-    width: min(46vw, 38rem);
-    --hero-mark-opacity: 0.18;
   }
 
   .section-header {
@@ -959,7 +899,6 @@ ul {
   :root {
     --container: 84rem;
     --space-2xl: 7.5rem;
-    --header-h: 4.75rem;
   }
 
   h1 {
@@ -970,51 +909,13 @@ ul {
     font-size: clamp(1.9rem, 2.4vw, 2.75rem);
   }
 
-  .brand-logo {
-    width: 2.85rem;
-    height: 2.85rem;
-  }
-
-  .brand-text {
-    font-size: 1.22rem;
-  }
-
-  .brand-text em {
-    font-size: 0.78rem;
-  }
-
-  .site-nav a:not(.btn) {
-    font-size: 1.1rem;
-  }
-
-  .btn-nav {
-    font-size: 1rem;
-    min-height: 2.75rem;
-    padding: 0.55rem 1.15rem;
-  }
-
   .hero-content {
     max-width: 50rem;
     padding-block: clamp(4rem, 8vh, 7rem);
   }
 
   .hero-brand {
-    font-size: clamp(2.1rem, 2.8vw, 3rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(2.6rem, 3.2vw, 4.1rem);
-  }
-
-  .hero-lead {
-    font-size: 1.3rem;
-    max-width: 40rem;
-  }
-
-  .hero-mark {
-    width: min(44vw, 42rem);
-    right: clamp(-2%, 4vw, 8%);
-    --hero-mark-opacity: 0.2;
+    font-size: clamp(1.9rem, 2.6vw, 2.6rem);
   }
 
   .about-layout .media-slot {
@@ -1050,45 +951,10 @@ ul {
 @media (min-width: 1800px) {
   :root {
     --container: 92rem;
-    --header-h: 5rem;
   }
 
   .container {
     width: min(100% - 4rem, var(--container));
-  }
-
-  .brand-logo {
-    width: 3.1rem;
-    height: 3.1rem;
-  }
-
-  .brand-text {
-    font-size: 1.3rem;
-  }
-
-  .site-nav a:not(.btn) {
-    font-size: 1.15rem;
-  }
-
-  .btn-nav {
-    font-size: 1.05rem;
-  }
-
-  .hero-brand {
-    font-size: clamp(2.4rem, 2.6vw, 3.35rem);
-  }
-
-  .hero h1 {
-    font-size: clamp(3rem, 3vw, 4.4rem);
-  }
-
-  .hero-lead {
-    font-size: 1.35rem;
-  }
-
-  .hero-mark {
-    width: min(40vw, 46rem);
-    --hero-mark-opacity: 0.22;
   }
 
   .about-layout .media-slot {
@@ -1102,6 +968,88 @@ ul {
   .contact-map,
   .contact-map iframe {
     min-height: 34rem;
+  }
+}
+
+/* Ultrawide — tipografia e header maiores */
+@media (min-width: 2200px) {
+  :root {
+    --header-h: 5rem;
+  }
+
+  .brand-logo {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+
+  .brand-text {
+    font-size: 1.32rem;
+  }
+
+  .brand-text em {
+    font-size: 1.05rem;
+  }
+
+  .site-nav {
+    gap: 1.6rem;
+  }
+
+  .site-nav a:not(.btn) {
+    font-size: 1.32rem;
+  }
+
+  .btn-nav {
+    font-size: 1.32rem;
+    min-height: 2.8rem;
+    padding: 0.55rem 1.2rem;
+  }
+
+  .hero-brand {
+    font-size: clamp(2.35rem, 2.2vw, 3.1rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 2.6vw, 4.2rem);
+  }
+
+  .hero-lead {
+    font-size: 1.35rem;
+    max-width: 42rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  :root {
+    --header-h: 5.35rem;
+  }
+
+  .brand-logo {
+    width: 3.45rem;
+    height: 3.45rem;
+  }
+
+  .brand-text {
+    font-size: 1.45rem;
+  }
+
+  .site-nav a:not(.btn) {
+    font-size: 1.45rem;
+  }
+
+  .btn-nav {
+    font-size: 1.45rem;
+  }
+
+  .hero-brand {
+    font-size: clamp(2.7rem, 1.9vw, 3.5rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(3.3rem, 2.3vw, 4.6rem);
+  }
+
+  .hero-lead {
+    font-size: 1.45rem;
   }
 }
 
