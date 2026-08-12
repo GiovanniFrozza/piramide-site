@@ -767,8 +767,9 @@ ul {
 }
 
 .contact-map {
-  height: 22rem;
   min-height: 22rem;
+  height: 100%;
+  align-self: stretch;
   overflow: hidden;
   border: 1px solid var(--color-line);
   background: var(--color-paper-deep);
@@ -919,8 +920,7 @@ ul {
   }
 
   .media-slot,
-  .media-slot-img,
-  .contact-map {
+  .media-slot-img {
     height: 26rem;
     min-height: 26rem;
   }
@@ -973,11 +973,6 @@ ul {
     font-size: 1.25rem;
   }
 
-  .contact-map {
-    height: 30rem;
-    min-height: 30rem;
-  }
-
   .cta-inner {
     max-width: 44rem;
   }
@@ -998,11 +993,6 @@ ul {
 
   .about-layout .media-slot-img {
     height: 36rem;
-  }
-
-  .contact-map {
-    height: 34rem;
-    min-height: 34rem;
   }
 }
 
