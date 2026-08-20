@@ -757,6 +757,7 @@ ul {
 }
 
 .contact-details a {
+  width: fit-content;
   text-decoration: none;
   font-weight: 600;
   color: var(--color-ink);
@@ -791,15 +792,15 @@ ul {
 
 .footer-inner {
   display: grid;
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
 .footer-top {
-  display: grid;
-  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
-  gap: var(--space-md) clamp(1.5rem, 4vw, 3rem);
-  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 }
 
 .brand-footer {
@@ -813,57 +814,6 @@ ul {
 
 .brand-footer .brand-text em {
   color: var(--color-sage-soft);
-}
-
-.footer-contact {
-  min-width: 0;
-  justify-self: end;
-  text-align: right;
-}
-
-.footer-contacts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.35rem 0.55rem;
-  margin: 0 0 var(--space-xs);
-  font-size: 0.98rem;
-  line-height: 1.45;
-}
-
-.footer-contacts a {
-  display: inline;
-  width: fit-content;
-  text-decoration: none;
-  font-weight: 600;
-  color: rgba(237, 244, 243, 0.92);
-}
-
-.footer-contacts a:hover {
-  color: var(--color-sage-soft);
-}
-
-.footer-sep {
-  color: rgba(237, 244, 243, 0.4);
-  user-select: none;
-}
-
-.footer-meta {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: rgba(237, 244, 243, 0.58);
-}
-
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-sm) var(--space-md);
-  padding-top: var(--space-md);
-  border-top: 1px solid rgba(237, 244, 243, 0.14);
 }
 
 .footer-nav {
@@ -884,6 +834,8 @@ ul {
 
 .footer-copy {
   margin: 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(237, 244, 243, 0.14);
   font-size: 0.9rem;
   color: rgba(237, 244, 243, 0.55);
 }
@@ -1213,20 +1165,6 @@ ul {
     min-height: 18rem;
   }
 
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .footer-contact {
-    justify-self: start;
-    text-align: left;
-  }
-
-  .footer-contacts {
-    justify-content: flex-start;
-  }
-
   .about-layout .media-slot {
     order: -1;
     max-height: 18rem;
@@ -1401,20 +1339,6 @@ ul {
 
   .site-footer {
     padding: var(--space-lg) 0 var(--space-md);
-  }
-
-  .footer-contacts {
-    gap: 0.3rem 0.45rem;
-    font-size: 0.95rem;
-  }
-
-  .footer-meta {
-    font-size: 0.85rem;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .footer-nav {
