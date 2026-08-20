@@ -36,6 +36,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (!target) return;
 
     event.preventDefault();
+
+    if (id === "#inicio" || id === "#topo") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const headerOffset = header?.offsetHeight ?? 68;
     const top =
       target.getBoundingClientRect().top + window.scrollY - headerOffset - 8;
