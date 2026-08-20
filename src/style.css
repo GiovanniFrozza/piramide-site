@@ -106,11 +106,12 @@ ul {
 }
 
 .eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
   color: var(--color-accent);
   margin: 0 0 var(--space-sm);
 }
@@ -121,8 +122,11 @@ ul {
 }
 
 .section-lead {
-  color: var(--color-muted);
-  font-size: 1.125rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 
 .section {
@@ -363,6 +367,8 @@ ul {
 }
 
 .hero-lead {
+  font-family: var(--font-display);
+  font-style: italic;
   font-size: 1.2rem;
   color: rgba(237, 244, 243, 0.88);
   max-width: 34rem;
@@ -605,13 +611,14 @@ ul {
 
 .faq-num {
   flex-shrink: 0;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--color-accent);
-  line-height: 1.6;
+  opacity: 0.55;
+  line-height: 1.35;
 }
 
 .faq-q {
@@ -1328,7 +1335,6 @@ ul {
 
   .cta-band {
     padding: 3.25rem 0;
-    text-align: left;
   }
 
   .cta-band .btn-primary {
