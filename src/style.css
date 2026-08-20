@@ -12,8 +12,8 @@
   --color-line: rgba(28, 34, 39, 0.12);
   --color-line-strong: rgba(28, 34, 39, 0.22);
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -751,7 +751,7 @@ ul {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: #6d9b8a;
 }
 
 .contact-details a {
