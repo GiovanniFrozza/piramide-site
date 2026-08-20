@@ -36,6 +36,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (!target) return;
 
     event.preventDefault();
+
+    if (id === "#inicio" || id === "#topo") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
     const headerOffset = header?.offsetHeight ?? 68;
     const top =
       target.getBoundingClientRect().top + window.scrollY - headerOffset - 8;
@@ -64,13 +70,13 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   reveals.forEach((el) => el.classList.add("is-visible"));
 }
 
-/* FAQ: abre um item por vez */
-document.querySelectorAll("[data-faq]").forEach((faq) => {
-  faq.addEventListener("toggle", (event) => {
+/* Acordeão (FAQ e Serviços no mobile): abre um item por vez dentro do grupo */
+document.querySelectorAll("[data-accordion]").forEach((group) => {
+  group.addEventListener("toggle", (event) => {
     const item = event.target;
     if (!(item instanceof HTMLDetailsElement) || !item.open) return;
 
-    faq.querySelectorAll("details.faq-item").forEach((other) => {
+    group.querySelectorAll("details").forEach((other) => {
       if (other !== item) other.open = false;
     });
   }, true);

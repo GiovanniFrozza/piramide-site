@@ -1,21 +1,19 @@
 /* Piramide RS — design tokens */
 :root {
-  --color-ink: #0f2a32;
-  --color-ink-soft: #35545c;
-  --color-muted: #5c7379;
-  --color-paper: #f4f7f6;
-  --color-paper-deep: #e6eeec;
+  --color-ink: #1c2227;
+  --color-ink-soft: #3d454c;
+  --color-muted: #667077;
+  --color-paper: #f6f6f5;
+  --color-paper-deep: #ebebe9;
   --color-surface: #ffffff;
   --color-teal: #1a5c63;
   --color-teal-deep: #0e3d43;
-  --color-sage: #6d9b8a;
-  --color-sage-soft: #b8d4c8;
-  --color-accent: #c4a35a;
-  --color-line: rgba(15, 42, 50, 0.12);
-  --color-line-strong: rgba(15, 42, 50, 0.22);
+  --color-accent: #a67c3d;
+  --color-line: rgba(28, 34, 39, 0.12);
+  --color-line-strong: rgba(28, 34, 39, 0.22);
 
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -108,12 +106,13 @@ ul {
 }
 
 .eyebrow {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-sage);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: var(--color-accent);
   margin: 0 0 var(--space-sm);
 }
 
@@ -123,8 +122,11 @@ ul {
 }
 
 .section-lead {
-  color: var(--color-muted);
-  font-size: 1.125rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-ink-soft);
+  font-size: 1.2rem;
+  line-height: 1.55;
 }
 
 .section {
@@ -143,7 +145,7 @@ ul {
   border-radius: var(--radius);
   font-family: var(--font-body);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
@@ -245,7 +247,7 @@ ul {
 }
 
 .brand-text em {
-  font-style: normal;
+  font-style: italic;
   font-size: 0.82rem;
   color: var(--color-teal);
   font-weight: 600;
@@ -260,7 +262,7 @@ ul {
 
 .site-nav a:not(.btn) {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.05rem;
   color: var(--color-ink-soft);
 }
@@ -349,7 +351,7 @@ ul {
   font-family: var(--font-display);
   font-size: clamp(2.6rem, 5.5vw, 4rem);
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
   color: #fff;
   margin: 0 0 var(--space-sm);
   line-height: 1.05;
@@ -365,6 +367,8 @@ ul {
 }
 
 .hero-lead {
+  font-family: var(--font-display);
+  font-style: italic;
   font-size: 1.2rem;
   color: rgba(237, 244, 243, 0.88);
   max-width: 34rem;
@@ -607,13 +611,14 @@ ul {
 
 .faq-num {
   flex-shrink: 0;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--color-sage);
-  line-height: 1.6;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-accent);
+  opacity: 0.55;
+  line-height: 1.35;
 }
 
 .faq-q {
@@ -682,7 +687,7 @@ ul {
   width: 0.35rem;
   height: 0.35rem;
   border-radius: 50%;
-  background: var(--color-sage);
+  background: var(--color-accent);
 }
 
 /* CTA band */
@@ -714,8 +719,8 @@ ul {
 }
 
 .cta-band .btn-primary:hover {
-  background: var(--color-sage-soft);
-  color: var(--color-teal-deep);
+  background: var(--color-accent);
+  color: #fff;
 }
 
 /* Contact */
@@ -753,7 +758,7 @@ ul {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-sage);
+  color: #6d9b8a;
 }
 
 .contact-details a {
@@ -813,7 +818,7 @@ ul {
 }
 
 .brand-footer .brand-text em {
-  color: var(--color-sage-soft);
+  color: var(--color-accent);
 }
 
 .footer-nav {
@@ -829,7 +834,7 @@ ul {
 }
 
 .footer-nav a:hover {
-  color: var(--color-sage-soft);
+  color: var(--color-accent);
 }
 
 .footer-copy {
@@ -1330,7 +1335,6 @@ ul {
 
   .cta-band {
     padding: 3.25rem 0;
-    text-align: left;
   }
 
   .cta-band .btn-primary {
